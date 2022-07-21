@@ -1,6 +1,6 @@
 # Normal build steps
 . build/envsetup.sh
-lunch rom_lavender-userdebug
+lunch blaze_alioth-userdebug
 
 # export variable here
 export TZ=Asia/Kolkata
