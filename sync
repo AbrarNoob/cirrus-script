@@ -13,9 +13,11 @@ repo init --depth=1 --no-repo-verify -u https://github.com/ProjectBlaze/manifest
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 
 # local manifest
-git clone --depth=1 https://github.com/$CIRRUS_REPO_OWNER/device_xiaomi_lavender -b x device/xiaomi/lavender
-git clone --depth=1 https://github.com/$CIRRUS_REPO_OWNER/vendor_xiaomi_lavender -b x vendor/xiaomi/lavender
-git clone --depth=1 https://github.com/$CIRRUS_REPO_OWNER/kernel_xiaomi_lavender -b x kernel/xiaomi/lavender
+git clone --depth=1 https://github.com/AbrarNoob/device_xiaomi_alioth -b 12L device/xiaomi/alioth 
+git clone --depth=1 https://github.com/AbrarNoob/device_xiaomi_sm8250-common -b 12L device/xiaomi/sm8250-common
+git clone --depth=1 https://github.com/AbrarNoob/vendor_xiaomi_alioth -b 12L vendor/xiaomi
+git clone --depth=1 https://github.com/EmanuelCN/kernel_xiaomi_sm8250 -b staging kernel/xiaomi/alioth
+git clone --depth=1 https://github.com/kdrag0n/proton-clang -b master prebuilts/clang/host/linux-x86/proton-clang
 
 tg "$rom_name source sync completed!
 Total Size: $(du -sh /tmp/rom | cut -d - -f 1 | cut -d / -f 1)
