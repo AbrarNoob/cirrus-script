@@ -19,6 +19,7 @@ git clone --depth=1 https://github.com/AbrarNoob/vendor_xiaomi_alioth -b 12L ven
 git clone --depth=1 https://github.com/EmanuelCN/kernel_xiaomi_sm8250 -b staging kernel/xiaomi/alioth
 git clone --depth=1 https://github.com/kdrag0n/proton-clang -b master prebuilts/clang/host/linux-x86/proton-clang
 
+
 tg "$rom_name source sync completed!
 Total Size: $(du -sh /tmp/rom | cut -d - -f 1 | cut -d / -f 1)
 Time Took: $(($SECONDS / 60)) minute(s) and $(($SECONDS % 60)) second(s).
